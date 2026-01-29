@@ -2,10 +2,8 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Step 1: Load datasets
-# Assuming 'ratings.csv' has columns: 'userId', 'movieId', 'rating'
 ratings_data = pd.read_csv("C:\\Users\\Dell\\OneDrive\\Documents\\WPS Cloud Files\\489422247\\Recommendation System\\ratings.csv")
-
-# Assuming 'movies.csv' has columns: 'movieId', 'title'
+'
 movies_data = pd.read_csv("C:\\Users\\Dell\\OneDrive\\Documents\\WPS Cloud Files\\489422247\\Recommendation System\\movies.csv")
 
 # Step 2: Merge datasets based on 'movieId'
@@ -19,8 +17,7 @@ user_similarity = cosine_similarity(user_movie_matrix.fillna(0))
 
 # Step 5: Recommendation Generation
 def get_recommendations(userId, user_movie_matrix, user_similarity):
-    # Find similar users for the given userId
-    similar_users = user_similarity[userId - 1]  # Assuming user indexing starts from 1
+    similar_users = user_similarity[userId - 1]  
 
     # Get movies rated by the given user
     user_rated_movies = user_movie_matrix.loc[userId].dropna().index
@@ -36,8 +33,9 @@ def get_recommendations(userId, user_movie_matrix, user_similarity):
     # Get movie names corresponding to movieIds
     movie_names = movies_data[movies_data['movieId'].isin(recommended_movies)]['title'].unique()
     
-    return list(movie_names)[:10]  # Return top 10 recommendations with movie names
+    return list(movie_names)[:10]  
 
 # Get recommendations for user 5
 user_5_recommendations = get_recommendations(5, user_movie_matrix, user_similarity)
+
 print("Recommended movies for User 5:", user_5_recommendations)
