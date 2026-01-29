@@ -1,23 +1,23 @@
-# 🎬 ReelWise – Intelligent movie recommendation system
+# ReelWise – Intelligent movie recommendation system
 
-### 📌 Overview  
-This project builds a **Movie Recommendation System** using **Collaborative Filtering** based on **Cosine Similarity**. It analyzes user ratings to suggest personalized movie recommendations. 🎥🍿  
+### Overview  
+This project builds a **Movie Recommendation System** using **Collaborative Filtering** based on **Cosine Similarity**. It analyzes user ratings to suggest personalized movie recommendations. 
 
-### 🔍 Key Steps  
-✅ **Data Loading & Preprocessing**  
-   - Loaded **ratings.csv** & **movies.csv** 🗂️  
+### Key Steps  
+**Data Loading & Preprocessing**  
+   - Loaded **ratings.csv** & **movies.csv**  
    - Merged datasets based on `movieId`  
-   - Created a **User-Movie rating matrix** 📊  
+   - Created a **User-Movie rating matrix** 
 
-✅ **Similarity Calculation (Cosine Similarity)**  
+**Similarity Calculation (Cosine Similarity)**  
    - Computed **User-User similarity** based on ratings  
    - Identified similar users for personalized recommendations  
 
-✅ **Recommendation Generation**  
+**Recommendation Generation**  
    - Recommended movies based on similar users' preferences  
    - Suggested **Top 10 unseen movies** for a target user 🎯  
 
-### 📂 Project Structure  
+### Project Structure  
 ```
 Movie-Recommendation-System/
 │── README.md  # Documentation  
@@ -29,45 +29,45 @@ Movie-Recommendation-System/
 │   ├── user_recommendations.csv  # Generated recommendations  
 ```  
 
-### 🔗 Dataset  
-📌 **Dataset Source:** [kaggle]  
+### Dataset  
+**Dataset Source:** [kaggle]  
 
-### 🔧 Technologies Used  
-🔹 Python  
-🔹 Pandas & NumPy (Data Handling)  
-🔹 Scikit-learn (Cosine Similarity)  
+### Technologies Used  
+Python  
+Pandas & NumPy (Data Handling)  
+Scikit-learn (Cosine Similarity)  
 
-### 📜 How to Run the Project?  
-#### 1️⃣ Clone the Repository  
+### How to Run the Project?  
+#### 1️ Clone the Repository  
 ```bash
 git clone https://github.com/Aishvariyaa/ReelWise.git
 cd ReelWise
 ```  
 
-#### 2️⃣ Install Dependencies  
+#### 2️ Install Dependencies  
 ```bash
 pip install -r requirements.txt
 ```  
 
-#### 3️⃣ Run the Script  
+#### 3️ Run the Script  
 ```bash
 python Recommendation System.py
 ```  
 
-### 📈 Sample Output  
-📌 **Recommended movies for User 5:**  
-🎥 *Movie 1*  
-🎥 *Movie 2*  
-🎥 *Movie 3*  
-🎥 *Movie 4*  
-🎥 *Movie 5*  
-🎥 *Movie 6*  
-🎥 *Movie 7*  
-🎥 *Movie 8*  
-🎥 *Movie 9*  
-🎥 *Movie 10*  
+### Sample Output  
+**Recommended movies for User 5:**  
+*Movie 1*  
+*Movie 2*  
+*Movie 3*  
+*Movie 4*  
+*Movie 5*  
+*Movie 6*  
+*Movie 7*  
+*Movie 8*  
+*Movie 9*  
+*Movie 10*  
 
-### 📌 Next Steps  
-🔹 Enhance recommendations using **Matrix Factorization (SVD)**  
-🔹 Implement a **Content-Based Filtering model**  
-🔹 Deploy as a **Web App** using Flask or Streamlit  
+### Next Steps  
+Enhance recommendations using **Matrix Factorization (SVD)**  
+Implement a **Content-Based Filtering model**  
+Deploy as a **Web App** using Flask or Streamlit  
